@@ -4,10 +4,10 @@ $stringa = "Grazie a voi, cari amici della notte. Io vi aspetto come di consueto
 if(isset($_GET['parola'])){
     $parolaCensurata = strtolower($_GET["parola"]);
     if(strpos(strtolower($stringa), $parolaCensurata) !== false){
-    $nuovaStringa = str_replace($parolaCensurata, '***', strtolower($stringa));
+    $nuovaStringa = str_ireplace($parolaCensurata, '***', $stringa);
 
 } else {
-    $nuovaStringa = "La parola da te selezionata non esiste nella stringa originale";
+    $nuovaStringa = "La parola da te selezionata non esiste nella stringa originale.";
     } 
 } else {
     $nuovaStringa = "Non hai scelto nessuna parola da censurare!";
@@ -29,16 +29,8 @@ $stringa_esplosa = explode('.', $nuovaStringa);
     <p>La stringa originale contiene <?php echo strlen($stringa)?> caratteri totali. </p>
     <hr>
     <h3>Nuova stringa con una parola censurata a scelta dall'utente</h3>
-    <p><?php echo ucfirst($nuovaStringa) ?></p>
+    <p><?php echo $nuovaStringa ?></p>
     <p>La nuova stringa contiene <?php echo strlen($nuovaStringa)?> caratteri totali. </p>
-    <p>
-            <?php 
-            foreach ($stringa_esplosa as $value) {
-            echo ucwords($value);
-            }
-            ?>
-
-    </p>
 </p>
 </body>
 </html>
