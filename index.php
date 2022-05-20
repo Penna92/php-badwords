@@ -1,25 +1,5 @@
 <?php
 
-//questa è una variabile
-// $name= "Clelia";
-// echo $name;
-// if(isset($_GET['nome']) && isset($_GET['cognome'])){
-//    $name = $_GET["nome"];
-//    $cognome = $_GET["cognome"];
-// } else {
-//     $name = "non so come ti chiami";
-//     $cognome = "";
-// if(isset($_GET['nome']) && isset($_GET['cognome'])){
-//    $name = $_GET["nome"];
-//    $cognome = $_GET["cognome"];
-// } else {
-//     $name = "non so come ti chiami";
-//     $cognome = "";
-
-// }
-// $parola = "notte"
-// }
-
 $stringa = "Grazie a voi, cari amici della notte. Io vi aspetto come di consueto sempre di notte, sempre sottovoce, noi diciamo un modo per capire, per capirsi e forse anche per capirci, quando un giorno, vista l'ora, è appena finito e un nuovo giorno è appena cominciato; un giorno in più per amare, per sognare, per vivere. Buonanotte.";
 if(isset($_GET['parola'])){
     $parolaCensurata = $_GET["parola"];
@@ -31,7 +11,6 @@ if(isset($_GET['parola'])){
 } else {
     $nuovaStringa = "Non hai scelto nessuna parola da censurare!";
 };
-
 
 ?>
 
